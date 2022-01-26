@@ -1,0 +1,1 @@
+# User Managed Identity with ASR
