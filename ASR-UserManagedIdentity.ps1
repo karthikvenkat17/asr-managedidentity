@@ -101,8 +101,8 @@ try {
             $VM = $vmMap.$VMID                
                 if( !(($Null -eq $VM) -Or ($Null -eq $VM.ResourceGroupName) -Or ($Null -eq $VM.RoleName))) {
                 #this check is to ensure that we skip when some data is not available else it will fail
-                Write-output "Resource group name - $VM.ResourceGroupName"
-                Write-output "VMName - $VM.RoleName"
+                Write-output "Resource group name - $($VM.ResourceGroupName)"
+                Write-output "VMName - $($VM.RoleName)"
                 $result = Set-VMManagedIdentity -VMName $VM.RoleName -rgName $VM.ResourceGroupName `
                                                   -failOverGroup $RecoveryPlanContext.GroupId
                 Write-Output $(Get-TimeStamp) 
